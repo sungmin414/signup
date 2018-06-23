@@ -1,4 +1,8 @@
-<h1>Post List</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Post List</h2>
 {% for post in posts %}
 <div>{{ post }}</div>
 {% endfor %}
+{% endblock %}
