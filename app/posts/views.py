@@ -3,9 +3,9 @@ from django.shortcuts import render
 
 
 def post_list(request):
-    return HttpResponse('Post List')
+    return render(request, 'posts/post_list.html')
 
 
 
 def post_detail(request, pk):
-    return HttpResponse('Post Detail pk: P{}'.format(pk))
+    return render(request, 'posts/post_detail.html')
