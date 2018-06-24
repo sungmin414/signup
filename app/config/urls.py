@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('posts/', include('posts.urls')),
     path('', views.index),
-
+    path('members/', include('members.urls'))
 
 ] + static( #이미지를 불러서 보여줌
     prefix=settings.MEDIA_URL,
