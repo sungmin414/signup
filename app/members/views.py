@@ -41,7 +41,7 @@ def login_view(request):
     # 인증에 성공하면 posts:post-list로 이동
     # 실패하면 다시 members:login으로 이동
         # form이 있는 template을 보여준다
-        return render(request, 'members/login.html', context)
+        return render(request, 'members/login_signup.html', context)
 
 
 def logout_view(request):
@@ -69,5 +69,5 @@ def signup_view(request):
             return HttpResponse('비밀번호가 일치하지 않습니다')
 
     else:
-        return render(request, 'members/signup.html')
+        return render(request, 'members/login_signup.html')
 

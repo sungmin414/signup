@@ -1,18 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h2>Post List</h2>
-
+<!--<div class="post_list">-->
+    <!--<div class="post_list_h2">-->
+        <!--<h2>Post List</h2>-->
+    <!--</div>-->
+<!--</div>-->
 {% for post in posts %}
-
-    <div>
+<div class="post_list">
+    <div class="post_list_h2">
         <div>{{ post.author.username }}</div>
+    </div>
         <div>
             <img width="100%" src="{{ post.photo.url }}" alt="">
         </div>
-    </div>
 
+</div>
 
 {% endfor %}
 {% endblock %}

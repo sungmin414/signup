@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="ko">
 <head>
@@ -6,13 +8,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Instagram</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
 
     <div>
-        <h1>Instargram</h1>
-
-        <div>
+        <div class="top_main">
+        <div class="top">
+            <h1>Instargram</h1>
+        </div>
+        <div class="top_nav">
             {% if user.is_authenticated %}
             <form action="{% url 'members:logout' %}" method="POST">
                 {% csrf_token %}
@@ -22,6 +27,7 @@
             <button type="submit"><a href="{% url 'members:login' %}">로그인</a></button>
             <button><a href="{% url 'members:signup' %}">signup</a></button>
             {% endif %}
+        </div>
         </div>
         {% block content %}
 
